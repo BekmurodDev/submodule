@@ -1,0 +1,42 @@
+syntax="proto3";
+
+package exam_service;
+option go_package="genproto/exam_service";
+
+
+message StoreChange {
+   string  Give_StoreId = 1;
+   string  Get_StoreId = 2;
+   string  ProdId = 3;
+   string  Count  = 4;
+}
+
+
+
+message ReadFrom  {
+	int64 Give_StoreId = 1;
+	string Give_StoreName = 2;
+	int64 ProdId = 3;    
+	string ProdName = 4;   
+	int64 Count = 5;   
+}
+
+
+message ReadTo  {
+    int64  Get_StoreId    =1;
+	string Get_StoreName   =2;
+	int64  ProdId          =3;
+	string ProdName        =4;
+	int64  Count           =5;
+}
+
+
+message Valid {
+	int64 Store  = 1;
+	int64 Prod   = 2;
+}
+
+message GiveMe {
+    string Day= 1;
+}
+
